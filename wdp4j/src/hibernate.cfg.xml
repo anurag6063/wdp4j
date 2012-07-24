@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory name="myhibernate">
+		<property name="show_sql">false</property>
+		
+		<property name="connection.datasource">java:comp/env/jdbc/hiromsoft</property>
+ 	
+		<property name="hibernate.jdbc.use_streams_for_binary">true</property>
+            	
+		<!-- property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property-->
+		<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+		
+	</session-factory>
+</hibernate-configuration>
