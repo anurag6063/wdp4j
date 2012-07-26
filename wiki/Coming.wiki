@@ -9,6 +9,9 @@ The first WDP4J release will be coming soon.
 
     WDP4J将使用JAVA为开发语言，将来可以扩展使用其他的语言，采用struts2的MVC结构，但是要对struts2进行精简，数据持久化使用hibernate，模块之间采取消息总线的结构，降低彼此之间的耦合性，该平台的数据处理过程是这样的：
     1.浏览器发出一个请求指令（平台的所有指令统一管理）
+
     2.struts2的filter进行处理，包括创建struts action和一个actionform，接收form提交的数据，然后将处理消息发送至消息中心（所有的对象和消息平台统一管理）
+
     3.已经注册的事件监听器按照优先级对actionform进行处理，最后返回struts2
+
     4.struts2将actionforward返送到客户端。
